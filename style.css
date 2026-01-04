@@ -1,36 +1,128 @@
+:root {
+    --bg-color: #121212;
+    --surface-color: #1e1e1e;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --on-surface: #e1e1e1;
+    --error-color: #cf6679;
+}
+
 body {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background-color: rgb(121, 121, 170);
-    color: white;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--on-surface);
 }
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.card {
+    background-color: var(--surface-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: var(--secondary-color);
+    color: #000;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+#imageInput {
+    display: none;
+}
+
+.controls input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    background: #333;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+#generate {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+#download {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.canvas-container {
+    background: #000;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
 canvas {
-    border: 2px solid #333;
-    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #333;
 }
-.controls {
-    margin-top: 10px;
+
+footer {
+    margin-top: 40px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
-.controls input, .controls button {
-    margin: 5px;
-}
-#generate{
-    background-color: green;
-    color: white;
-    font-weight: bold;
-    padding: 6px;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-}
-#download{
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    padding: 6px;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
+
+footer p {
+    margin: 5px 0;
 }
