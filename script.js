@@ -12,8 +12,11 @@
       let img = new Image();
       img.src = e.target.result;
       img.onload = () => {
-        uploadedImage = img;
-        drawImage();
+      uploadedImage = img;
+      // Dynamic resizing:
+      canvas.width = img.width;
+      canvas.height = img.height;
+       drawImage();
       };
     };
 
