@@ -104,16 +104,16 @@ button:active {
 }
 
 .canvas-container {
-    background: #000;
-    padding: 10px;
-    border-radius: 8px;
-    display: inline-block;
+    width: 100%;
+    max-width: 580px; /* Matches your canvas width */
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 canvas {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #333;
+    width: 100% !important; /* Forces canvas to shrink on mobile */
+    height: auto !important;
+    display: block;
 }
 
 footer {
