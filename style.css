@@ -104,16 +104,16 @@ button:active {
 }
 
 .canvas-container {
-    width: 100%;
-    max-width: 580px; /* Matches your canvas width */
-    margin: 0 auto;
-    overflow: hidden;
+    background: #000;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
 }
 
 canvas {
-    width: 100% !important; /* Forces canvas to shrink on mobile */
-    height: auto !important;
-    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #333;
 }
 
 footer {
@@ -149,72 +149,5 @@ footer p {
 
 .coffee-button:hover {
     transform: scale(1.05);
-}
-
-.support-container {
-    margin-top: 40px;
-    padding: 30px;
-    background: var(--surface-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 15px;
-    width: 100%;
-}
-
-.support-container h3 {
-    color: var(--primary-color);
-    margin-top: 0;
-}
-
-.coffee-button-modern {
-    display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    margin: 15px 0;
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
-}
-
-.coffee-button-modern:hover {
-    transform: scale(1.1) rotate(-2deg);
-}
-
-.supporters-wall {
-    margin-top: 25px;
-    border-top: 1px solid #333;
-    padding-top: 20px;
-}
-
-.supporters-wall h4 {
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-#supportersList {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-#supportersList li a {
-    color: var(--on-surface);
-    text-decoration: none;
-    font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 5px 12px;
-    border-radius: 20px;
-    transition: background 0.2s;
-}
-
-#supportersList li a:hover {
-    background: var(--secondary-color);
-    color: #000;
-}
-
-.credits {
-    font-size: 0.8rem;
-    opacity: 0.6;
 }
 
