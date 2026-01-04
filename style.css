@@ -126,3 +126,27 @@ footer {
 footer p {
     margin: 5px 0;
 }
+.contributors {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.contributors p {
+    margin: 5px 0;
+    font-size: 0.85rem;
+}
+
+.support-us {
+    margin-top: 20px;
+}
+
+.coffee-button {
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.coffee-button:hover {
+    transform: scale(1.05);
+}
